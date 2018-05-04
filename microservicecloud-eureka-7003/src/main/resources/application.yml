@@ -1,0 +1,11 @@
+server:
+  port: 7003
+eureka: 
+  instance:
+    hostname: springcloud03.com
+  client: 
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://springcloud01.com:7001/eureka/,http://springcloud02.com:7002/eureka/
+      

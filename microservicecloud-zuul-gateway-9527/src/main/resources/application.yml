@@ -1,0 +1,22 @@
+server:
+  port: 9527
+spring: 
+  application: 
+    name: microservicecloud-zuul-gateway                       #应用名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://springcloud02.com:7002/eureka/,http://springcloud03.com:7003/eureka/,http://springcloud01.com:7001/eureka/
+  instance:
+    instance-id: zuul-gateway-9527
+    prefer-ip-address: true
+zuul:
+  prefix: /yaoyao
+  ignored-services: "*"
+  routes:
+    dept.serviceId: microservicecloud-dept
+    dept.path: /dept/**
+info: 
+  app.name: microservicecloud
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

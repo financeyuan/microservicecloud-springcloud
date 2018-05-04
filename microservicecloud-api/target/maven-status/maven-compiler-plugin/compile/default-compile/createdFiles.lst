@@ -1,0 +1,4 @@
+com\yaoyao\api\service\DeptClientService.class
+com\yaoyao\api\service\DeptClientServiceFallBackFactory$1.class
+com\yaoyao\api\service\DeptClientServiceFallBackFactory.class
+com\yaoyao\api\entity\Dept.class

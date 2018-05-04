@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: microservicecloud-config-eureka-client #需要从服务器上读取的资源名称
+      profile: dev  #本次访问的配置项
+      label: master
+      uri: http://127.0.0.1:3344 #通过config服务连接到资源项获取对应的资源

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+<mapper namespace="com.yaoyao.microservicecloud.dao.deptDao">
+
+	<select id="findById" parameterType="Long" resultType = "com.yaoyao.api.entity.Dept">
+		select depeno,dname,db_source from dept where depeno = #{depeno}
+	</select>
+
+	<select id="findAll"  resultType = "com.yaoyao.api.entity.Dept">
+		select depeno,dname,db_source from dept
+	</select>
+	
+	<insert id="add" parameterType="com.yaoyao.api.entity.Dept" >
+		INSERT INTO dept (dname,db_source) VALUES (#{dname},DATABASE());
+	</insert>
+	
+</mapper>
